@@ -2,3 +2,6 @@ title: Custom Template
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
+- title: The trick
+  statement: markdowns/trick.md
+
