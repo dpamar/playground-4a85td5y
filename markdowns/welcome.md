@@ -25,5 +25,5 @@ _Note 2_: This is a **Unix-based OS only** playground.
 * Windows : find a POSIX implementation (Cygwin) or use the brand new Windows 10 embedded Linux distribution
 
 Required :
-* A BF interpreter - well I'm sure you didn't spent all this time on the previous playgrounds with a BF interpreter, did you? Or you're probably insaner than I am...
+* A BF interpreter - well I'm sure you didn't spent all this time on the previous playgrounds without any BF interpreter, did you? Or you're probably insaner than I am...
 * A shell (bash for example)
