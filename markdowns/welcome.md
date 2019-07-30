@@ -19,7 +19,7 @@ The goal of this playground is to explain how to create BF executables. A very s
 
 _Note 1_: This is **not** a "compile BF" playground
 
-_Note 2_: This is a **Unix-like only** playground.
+_Note 2_: This is a **Unix-based OS only** playground.
 * MacOS X : ok
 * Linux : generally ok
 * Windows : find a POSIX implementation (Cygwin) or use the brand new Windows 10 embedded Linux distribution
