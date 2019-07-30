@@ -24,33 +24,3 @@ This is really useful, for multiple reasons
   * `./myscript.bf` will read carriage returns as `code 10` char, that's all (and Ctrl-C will "close" the program).
 
 Let's implement an example that leverage this new capability.
-
-# Let's start
-
-* Memory: 
-* Cursor: 
-* Input: any
-
-# Process
-
-* while B is not null
-  * _invariant: A cell + B cell = A+B_ 
-  * decrease B
-  * increase A
-* loop
-* _B cell = 0, A cell = A+B - 0 = A+B_ 
-
-# Code
-```
-```
-
-# Minified version
-```
-```
-
-# Final state
-
-* Memory: 
-* Cursor: 
-* Input: unchanged
-* Output: unchanged
