@@ -1,7 +1,9 @@
-title: Custom Template
+title: BrainFuck part 12 - BF self-executables
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
 - title: The trick
   statement: markdowns/trick.md
+- title: Enhanced RPN calc tool
+  statement: markdowns/rpn.md
 
