@@ -10,6 +10,8 @@ Let's enhance our calc tool
 
 _Note_: Print starts with some < and space is a > : let's not write ><<< but just << instead
 
+_Note 2_: we can remove the line break after "P" print. Enter will do it, and P just prints the value.
+
 # Let's start
 
 * Memory: empty
@@ -35,10 +37,12 @@ _Note_: Print starts with some < and space is a > : let's not write ><<< but jus
     * reset else flag, subtract the 2 operands
   * subtract 2 (total 47), if char is null : it's division
     * reset else flag, divide the 2 operands
-  * subtract 20 (total 67), if char is null : it's copy
-    * reset else flag, divide the 2 operands
+  * subtract 18 (total 65), if char is null : it's ASCII print
+    * reset else flag, print first operand as char
+  * subtract 2 (total 67), if char is null : it's copy
+    * reset else flag, copy first operand
   * subtract 1 (total 68), if char is null : it's drop
-    * reset else flag, divide the 2 operands
+    * reset else flag, drop first operand
   * subtract 12 (total 80), if char is null : it's print
     * reset else flag, print first operand
   * subtract 2 (total 82), if char is null : it's rot
@@ -62,6 +66,7 @@ _Note_: Print starts with some < and space is a > : let's not write ><<< but jus
   add 43
   subtract 45
   divide 47
+  ascii print 65
   copy 67
   drop 68
   print 80
@@ -76,7 +81,8 @@ _Note_: Print starts with some < and space is a > : let's not write ><<< but jus
   [-                    subtract 1
   [--                   subtract 2
   [--                   subtract 2
-  [>++++[-<---->]+<     subtract 20
+  [>+++++[-<--->]+<     subtract 18
+  [--                   subtract 2
   [-                    subtract 1
   [------------         subtract 12
   [--                   subtract 2
@@ -100,13 +106,14 @@ _Note_: Print starts with some < and space is a > : let's not write ><<< but jus
     ]>+[-<+>]>>>[-]>[-<   ** part 4 **
     <<<+>>>>]<<<<]<[>++   ** part 5 **
     ++++[<++++++++>-]<-   ** part 6 **
-    .[-]<]                ** part 7 **
-    ++++++++++.[-]>     print newline (and reset newline char)
+    .[-]<]>               ** part 7 **
   ]<]>[-                next case: it's drop
     <<<[-]>             remove stack first value
   ]<]>[-                next case: it's copy
     <<<[->+>+<<]        duplicate stack first value
     >>[-<<+>>]>         move duplicate back to original location
+  ]<]>[-                next case: it's ASCII print
+    <<<.>>              Print value as ASCII char
   ]<]>[-                next case: it's division
     <<<[->>>+<<<]<      move 2nd operand
     [->+>>+>-[<-]<[->>+ divide
@@ -170,9 +177,13 @@ Example
 > 3
 3 *
 > 9
-C C 3 / P * *
+C C 3 / P 10 A D * *
 3
 > 243
+123 C P 32 A 47 A D A 5 P S A 61 A D A R C R / P D R 44 A S A S 5 * 2 / 4 + A 13 - A 8 + A D A D S % P 10 A D
+123 / 5 = 24, rem 3
+> 3
 ```
 
 1+2 = 3, 3x3 = 9, 2 copies= 9,9,9, then 9/3 = 3 (printed) and finally 9x3=27 and 9x27 = 243
+and for the long line, it prints the " / ", " = " and ", rem " from ASCII codes.
